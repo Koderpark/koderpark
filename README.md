@@ -1,6 +1,6 @@
 ### Hi there 👋
 [![SolvedAC tier](http://mazassumnida.wtf/api/generate_badge?boj=koder0205)](https://solved.ac/koder0205)  
-[![Github Stats](https://github-readme-stats.vercel.app/api?username=koder0205&hide=contribs,prs)](https://github.com/anuraghazra/github-readme-stats)
+[![Github Stats](https://github-readme-stats.vercel.app/api?username=koder0205&hide=contribs)](https://github.com/anuraghazra/github-readme-stats)
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=koder0205&layout=compact)](https://github.com/anuraghazra/github-readme-stats)
 <!--
 **Koder0205/Koder0205** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
