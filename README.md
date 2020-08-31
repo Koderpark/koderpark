@@ -1,6 +1,5 @@
 ### Hi there 👋
-[![Solved.ac
-프로필](http://mazassumnida.wtf/api/generate_badge?boj={handle})](https://solved.ac/{handle})
+[![Koder0205](http://mazassumnida.wtf/api/generate_badge?boj=koder0205)](https://solved.ac/koder0205)
 <!--
 **Koder0205/Koder0205** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
