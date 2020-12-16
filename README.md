@@ -11,4 +11,4 @@
 [![SolvedAC tier](http://mazassumnida.wtf/api/generate_badge?boj=koder0205)](https://solved.ac/koder0205)  
 [백준](https://www.acmicpc.net/user/koder0205) | [코드업](https://codeup.kr/userinfo.php?user=koder0205) |  [솔브드AC](https://solved.ac/profile/koder0205) | [코드포스](https://codeforces.com/profile/Koder0205)
 
-[자기소개글 / 블로그]https://blog.koderpark.dev/79
+[자기소개글 / 블로그](https://blog.koderpark.dev/79)
