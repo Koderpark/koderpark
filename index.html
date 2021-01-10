@@ -13,8 +13,8 @@
     
 
     <!-- Bootstrap core CSS -->
-<link href="./css/bootstrap.min.css" rel="stylesheet">
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+    <link href="./css/bootstrap.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
     <!--<style>
       .bd-placeholder-img {
@@ -32,7 +32,40 @@
       }
     </style>-->
 
-    
+    <style>
+      .main-title{
+        font-size: 64px;
+        font-weight: 64px;
+        background: linear-gradient( to right, #4b279b, #df99d8 );
+        padding: 1rem;
+        color: #ffffff;
+        display: inline-block;
+      }
+      .sub-title{
+        font-size: 24px;
+        font-weight: 24px;
+        background-color: #ffffff;
+        padding: 1rem;
+        color: #080808;
+        display: inline-block;
+      }
+      .bg-color{
+        background-color: #080808;
+        z-index: -1;
+      }
+      .bg-image{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("asset/bg/title.png") no-repeat center center;
+        background-size: cover;
+        opacity: 0.5;
+        z-index: 0;
+      }
+      .bg-content{
+        z-index: 1;
+      }
+    </style>
   </head>
   <body>
     
@@ -71,27 +104,28 @@
 </header>
 
 <main>
-
+  <div class="bg-image"></div>
   <section class="vh-100 container-fluid">
-    <div class="vh-100 row">
-      <div class="p-5 col-lg-8 align-self-center">
-        <h1 class="fw-light">Album example</h1>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-        <p>
-          <a href="#" class="btn btn-primary my-2">Main call to action</a>
-          <a href="#" class="btn btn-secondary my-2">Secondary action</a>
+    <div class="vh-100 row bg-color">
+      <div class="p-5 col-lg-8 align-self-center bg-content">
+        <h1 class="fw-bold main-title">박성훈 / Koder0205</h1>
+        <p class="sub-title">
+          아름고등학교 2학년 재학중인 학생이자 유사프로그래머입니다.</br>
+          대부분의 플랫폼에 대응 가능하다는 점에서 웹 프로그래밍에 관심을 가지고 있으며,</br>
+          알고리즘도 좋아합니다</br>
+        </p>
+        <p class="sub-title">
+          asdasdasdfasdfasdf
         </p>
       </div>
-      <div class="p-5 col-lg-4 align-self-center">
-
+      <div class="p-5 col-lg-4 align-self-center bg-content">ㄴ
       </div>
     </div>
   </section>
 
-  <div class="py-5 bg-light">
+  <div class="bg-light">
     <div class="container-sm p-5">
-
-      <div class="row row-cols-1 row-cols-sm-1 row-cols-md-3 g-2" data-masonry='{"percentPosition": true }'>
+      <div class="row row-cols-1 row-cols-md-3 g-4" data-masonry='{"percentPosition": true }'>
         <div class="col">
           <div class="card shadow-sm">
             <img class="bd-placeholder-img card-img-top" width="100%"  aria-label="Placeholder: Thumbnail" src="asset/img/test.png"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/>
@@ -103,55 +137,6 @@
                   <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
                   <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col">
-          <div class="card shadow-sm">
-            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Thumbnail" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
-
-            <div class="card-body">
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <div class="d-flex justify-content-between align-items-center">
-                <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                </div>
-                <small class="text-muted">9 mins</small>
               </div>
             </div>
           </div>
