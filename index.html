@@ -33,45 +33,39 @@
     </style>-->
 
     <style>
-      .main-title{
-        font-size: 64px;
-        font-weight: 64px;
-        background: linear-gradient( to right, #4b279b, #df99d8 );
-        padding: 1rem;
-        color: #ffffff;
-        display: inline-block;
-      }
-      .sub-title{
-        font-size: 1.5em;
-        font-weight: 1.5em;
-        
-        padding: 1rem;
-        color: #ffffff;
-        display: inline-block;
-      }
-      .bg-color{
-        margin: 0;
-        background-color: #080808;
-        z-index: -1;
-        width: 100%;
-        overflow: hidden;
-      }
+      .main-title{ font-size: 4rem; font-weight: 4rem; background: linear-gradient( to right, #4b279b, #df99d8 ); padding: 1rem; color: #ffffff; display: inline-block; }
+      .sub-title{ font-size: 1.375em; font-weight: 1.375em; padding: 1rem; color: #ffffff; display: inline-block; }
       .bg-image{
-        height: 100%;
-        width: 100%;
-        object-fit: cover;
-        position: absolute;
-
-        opacity: 0.46;
-        z-index: 0;
-      }
-      .bg-content{
-        z-index: 1;
-      }
-      .bg-mockup{
-        padding: 0 !important;
         margin: 0;
-        max-width: 100%;
+        min-height: 100vh;
+        background-image: linear-gradient( rgba(0,0,0,0.54), rgba(0,0,0,0.54) ),url("asset/bg/title.png");
+        background-size: cover;
+        background-position: center;
+      }
+      .mockup-parent{position: relative;}
+      .mockup-frame{ position: relative; z-index: 100; padding: 0; margin: 0; max-width: 100%; }
+      .mockup-inner{
+        background-image: url("asset/phone/background.png");
+        background-size: cover;
+        background-position: center;
+        position:absolute; top: 4.7%; bottom: 5%; left: 27.5%; right: 30%; z-index: 1;
+        background-color: #FFF;
+      }
+      .mockup-dock{
+        display: flex;
+        justify-content: space-between;
+        position: absolute;
+        bottom: 1.8%;
+        right: 4%;
+        left: 4%;
+        margin: 0;
+        background-color: rgba(128,128,160,0.5);
+        border-radius: 8% / 32%;
+      }
+      .mockup-dock-icon{
+        width: 19%;
+        border-radius: 33%;
+        margin: 3%;
       }
     </style>
   </head>
@@ -112,9 +106,9 @@
 </header>
 
 <main>
-  <div class="container-fluid p-0 row bg-color vh-100">
-      <img src="asset/bg/title.png" class="bg-image p-0">
-      <div class="p-5 col-lg-7 align-self-center bg-content">
+  <div class="container-fluid p-0 row bg-image">
+      <div class="col-lg-1"></div><!--고오급 padding-->
+      <div class="p-5 col-lg-6 align-self-center">
         <h1 class="fw-bold main-title">박성훈 / Koder0205</h1>
         <p class="sub-title">
           아름고등학교 2학년 재학중인 학생이자 유사프로그래머입니다.</br>
@@ -127,8 +121,16 @@
           마음껏 만들어 볼 수 있는것이 좋아서 프로그래밍을 시작했습니다</br>
         </p>
       </div>
-      <div class="p-0 col-lg-5 align-self-center bg-content">
-        <img src="asset/bg/mockup.png" class="bg-mockup">
+      <div class="p-0 col-lg-5 align-self-center mockup-parent">
+        <img src="asset/bg/mockup.png" class="mockup-frame">
+        <div class="mockup-inner">
+          <div class="mockup-dock align-items-center">
+            <img class="mockup-dock-icon" src="asset/phone/icon_email.png"></img>
+            <img class="mockup-dock-icon" src="asset/phone/icon_kakaotalk.png"></img>
+            <img class="mockup-dock-icon" src="asset/phone/icon_twitter.png"></img>
+            <img class="mockup-dock-icon" src="asset/phone/icon_discord.jpg"></img>
+          </div>
+        </div>
       </div>
     </div>
 
