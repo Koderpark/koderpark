@@ -37,18 +37,30 @@
       .sub-title{ font-size: 1.375em; font-weight: 1.375em; padding: 1rem; color: #ffffff; display: inline-block; }
       .bg-image{
         margin: 0;
+        padding: 0 4%;
         min-height: 100vh;
         background-image: linear-gradient( rgba(0,0,0,0.54), rgba(0,0,0,0.54) ),url("asset/bg/title.png");
         background-size: cover;
         background-position: center;
       }
-      .mockup-parent{position: relative;}
-      .mockup-frame{ position: relative; z-index: 100; padding: 0; margin: 0; max-width: 100%; }
+      .mockup-parent{ position: relative;}
+      .mockup-frame{
+        display:block;
+        position: relative; 
+        z-index: 100; 
+        padding: 0; 
+        margin: 0; 
+        max-width: 100%; 
+        max-height: 100vh;
+        background-image: url("asset/phone/mockup.png");
+        background-size: cover;
+        background-position: center;
+      }
       .mockup-inner{
         background-image: url("asset/phone/background.png");
         background-size: cover;
         background-position: center;
-        position:absolute; top: 4.7%; bottom: 5%; left: 27.5%; right: 30%; z-index: 1;
+        position:absolute; top: 3.75%; bottom: 5%; left: 7.5%; right: 7.5%; z-index: 1;
         background-color: #FFF;
       }
       .mockup-dock{
@@ -66,6 +78,10 @@
         width: 19%;
         border-radius: 33%;
         margin: 3%;
+      }
+      @media screen and (max-width: 768px){
+        .main-title{ font-size: 2.5rem; }
+        .sub-title{ font-size: 1.125rem; }
       }
     </style>
   </head>
@@ -106,9 +122,8 @@
 </header>
 
 <main>
-  <div class="container-fluid p-0 row bg-image">
-      <div class="col-lg-1"></div><!--고오급 padding-->
-      <div class="p-3 col-lg-6 align-self-center">
+  <div class="container-fluid row bg-image">
+      <div class="p-3 col-lg-9 align-self-center">
         <h1 class="fw-bold main-title">박성훈 / Koder0205</h1>
         <p class="sub-title">
           아름고등학교 2학년 재학중인 학생이자 유사프로그래머입니다.</br>
@@ -121,14 +136,16 @@
           마음껏 만들어 볼 수 있는것이 좋아서 프로그래밍을 시작했습니다</br>
         </p>
       </div>
-      <div class="p-0 col-lg-5 align-self-center mockup-parent">
-        <img src="asset/bg/mockup.png" class="mockup-frame">
-        <div class="mockup-inner">
-          <div class="mockup-dock align-items-center">
-            <img class="mockup-dock-icon" src="asset/phone/icon_email.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_kakaotalk.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_twitter.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_discord.jpg"></img>
+      <div class="p-0 col-lg-3 align-self-center mockup-parent">
+        <img src="asset/phone/mockup.png" class="mockup-frame">
+        <div class="mockup-content">
+          <div class="mockup-inner">
+            <div class="mockup-dock align-items-center">
+              <img class="mockup-dock-icon" src="asset/phone/icon_email.png"></img>
+              <img class="mockup-dock-icon" src="asset/phone/icon_kakaotalk.png"></img>
+              <img class="mockup-dock-icon" src="asset/phone/icon_twitter.png"></img>
+              <img class="mockup-dock-icon" src="asset/phone/icon_discord.jpg"></img>
+            </div>
           </div>
         </div>
       </div>
