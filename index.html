@@ -33,61 +33,43 @@
     </style>-->
 
     <style>
-      .main-title{ font-size: 4rem; font-weight: 4rem; background: linear-gradient( to right, #4b279b, #df99d8 ); padding: 1rem; color: #ffffff; display: inline-block; }
+      .main-title{ border-radius: 40px; font-size: 4rem; font-weight: 4rem; background: linear-gradient( to right, #4b279b, #df99d8 ); padding: 1rem; color: #ffffff; display: inline-block; }
       .sub-title{ font-size: 1.375em; font-weight: 1.375em; padding: 1rem; color: #ffffff; display: inline-block; }
       .bg-image{
         margin: 0;
-        padding: 0 4%;
+        padding: 0 3%;
         min-height: 100vh;
         background-image: linear-gradient( rgba(0,0,0,0.54), rgba(0,0,0,0.54) ),url("asset/bg/title.png");
         background-size: cover;
         background-position: center;
       }
-      .mockup-parent{ position: relative;}
-      .mockup-content{
-        height: 0;
-        display:inline-block;
-        padding-bottom: 197%;
-        max-width: 100vh;
-      }
-      .mockup-frame{
-        display:block;
-        position: relative; 
-        z-index: 100; 
-        padding: 0; 
-        margin: 0; 
-        max-width: 100%; 
-        max-height: 100vh;
-        background-image: url("asset/phone/mockup.png");
+      .icon-contect{
         background-size: cover;
-        background-position: center;
+        margin: 8px;
+        display: inline-block;
+        width: 128px;
+        height: 128px;
+        border-radius: 40px;
       }
-      .mockup-inner{
-        position: absolute;
-        top: 5%; right: 0; left: 0; bottom: 0;
-        z-index: 0; 
-        padding: 0; 
-        margin: 0;
-        width: 100%;
+      .icon-kakao{background-image: url("asset/icon/kakao.png");}
+      .icon-email{background-image: url("asset/icon/email.png");}
+      .icon-twitter{background-image: url("asset/icon/twitter.png");}
+      .icon-facebook{background-image: url("asset/icon/facebook.png");}
+      .icon-github{background-image: url("asset/icon/github.png");}
+      .icon-tistory{background-image: url("asset/icon/tistory.png");}
+      .icon-solvedac{background-image: url("asset/icon/solvedac.svg");}
+      .icon-boj{background-image: url("asset/icon/boj.svg");}
+      .icon-cf{background-image: url("asset/icon/cf.svg");}
+      
+      
+      @media screen and (max-width: 1200px){
+        .bg-image{ padding: 0 8px; }
       }
-      .mockup-dock{
-        display: flex;
-        justify-content: space-between;
-        bottom: 7%;
-        right: 11%;
-        left: 11%;
-        margin: 0;
-        background-color: rgba(128,128,160,0.5);
-        border-radius: 8% / 32%;
-      }
-      .mockup-dock-icon{
-        width: 19%;
-        border-radius: 33%;
-        margin: 3%;
-      }
+      
       @media screen and (max-width: 768px){
-        .main-title{ font-size: 2.5rem; }
+        .main-title{ font-size: 2.5rem; border-radius: 32px;}
         .sub-title{ font-size: 1.125rem; }
+        .icon-contect{ width: 96px; height: 96px; border-radius: 36px; }
       }
     </style>
   </head>
@@ -129,11 +111,12 @@
 
 <main>
   <div class="container-fluid row bg-image">
-      <div class="p-3 col-lg-9 align-self-center">
+      <div class="col-lg-8 align-self-center">
         <h1 class="fw-bold main-title">박성훈 / Koder0205</h1>
         <p class="sub-title">
           아름고등학교 2학년 재학중인 학생이자 유사프로그래머입니다.</br>
-          대부분의 플랫폼에 대응 가능하다는 점에서 웹 프로그래밍에 관심을 가지고 있으며,</br>
+          대부분의 플랫폼에 대응 가능하다는 점에서</br>
+          웹 프로그래밍에 관심을 가지고 있으며,</br>
           알고리즘도 좋아합니다</br>
           최근에는 앱개발도 살짝 흥미를 가지고 있습니다</br>
         </p>
@@ -142,17 +125,18 @@
           마음껏 만들어 볼 수 있는것이 좋아서 프로그래밍을 시작했습니다</br>
         </p>
       </div>
-      <div class="p-0 col-lg-3 align-self-center mockup-parent">
-        <div class="mockup-content">
-          <img src="asset/phone/mockup.png" class="mockup-frame">
-          <img src="asset/phone/background.jpg" class="mockup-inner">
-          <div class="mockup-dock align-items-center">
-            <img class="mockup-dock-icon" src="asset/phone/icon_email.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_kakaotalk.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_twitter.png"></img>
-            <img class="mockup-dock-icon" src="asset/phone/icon_discord.jpg"></img>
-          </div>
-        </div>
+      <div class="col-lg-4 align-self-center">
+          <a class="icon-contect icon-email" href ="mailto:koder0205@kakao.com"></a>
+          <a class="icon-contect icon-tistory" href ="https://blog.koderpark.dev"></a>
+          <a class="icon-contect icon-kakao" href ="https://open.kakao.com/o/s0ylveLc"></a>
+          
+          <a class="icon-contect icon-github" href ="https://github.com/Koder0205"></a>
+          <a class="icon-contect icon-twitter" href ="https://twitter.com/Koder0205"></a>
+          <a class="icon-contect icon-facebook" href ="https://www.facebook.com/profile.php?id=100020063651123"></a>
+          
+          <a class="icon-contect icon-boj" href ="https://www.acmicpc.net/user/koder0205"></a>
+          <a class="icon-contect icon-cf" href ="https://codeforces.com/profile/Koder0205"></a>
+          <a class="icon-contect icon-solvedac" href ="https://solved.ac/profile/koder0205"></a>
       </div>
     </div>
 
