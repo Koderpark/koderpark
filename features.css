@@ -5,10 +5,6 @@
 .rounding{
     border-radius: 40px;
 }
-.rounding-top{
-    border-radius: 40px 40px 0px 0px;
-}
-
 .top-content .carousel-item {
   height: 100vh;
   min-height: 400px;
