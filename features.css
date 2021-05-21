@@ -1,5 +1,12 @@
+.wb{
+  word-break: keep-all;
+}
+
 .rounding{
     border-radius: 40px;
+}
+.rounding{
+    border-radius: 40px 40px 0px 0px;
 }
 
 .top-content .carousel-item {
