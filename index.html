@@ -14,28 +14,31 @@
 
   <!-- Bootstrap core CSS -->
   <link href="./asset/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+  
+  <!-- flickity core CSS -->
+  <link href="./asset/bootstrap/css/flickity.css" rel="stylesheet" media="screen">
 
   <!-- Custom styles for this template -->
   <link href="features.css" rel="stylesheet">
 </head>
 
+<script>
+  var slider = new Flickity('.scrollh', {
+    cellAlign: 'left';
+    contain: true;
+  });
+</script>
+  
 <body>
   <main>
     <!-- 최상단 커버페이지 -->
     <div class="top-content">
       <div id="carousel" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-target="#carousel-example" data-slide-to="0" class="active"></li>
-        </ol>
-
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="carousel-caption">
               <h1 class="display-4 fw-bold">박성훈</h1>
-              <div class="carousel-caption-description">
-                <p>아름고등학교 2학년 유사프로그래머</p>
-              </div>
+              <p>아름고등학교 2학년 유사프로그래머</p>
             </div>
           </div>
         </div>
@@ -43,10 +46,10 @@
     </div>
 
     <!-- 그박누? -->
-    <div class="container-fluid p-5 my-5" id="who">
+    <div class="container-fluid paddx my-5" id="who">
       <div class="row flex-lg-row-reverse align-items-center">
         <div class="col-lg-5 my-5">
-          <img src="/asset/img/introduce.png" class="vw-100 img-fluid rounding">
+          <img src="/asset/img/introduce.png" class="leftimgsize img-fluid rounding">
         </div>
         <div class="col-lg-7 my-5">
           <h1 class="display-5 fw-bold lh-1 mb-3">그래서 박성훈이 누구죠?</h1>
@@ -61,57 +64,168 @@
       </div>
     </div>
 
-    <!-- 박성훈의 개인정보 -->
-    <div class="container-fluid p-5 my-5" id="contact">
-      <div class="row flex-lg-row align-items-center">
-        <div class="col-lg-7 my-5">
-          <h1 class="display-5 fw-bold lh-1 mb-3">연락처</h1>
-          <p class="lead">
-            아싸 프로그래머와 친구가 되어주세요!<br />
-          </p>
-          <div class="d-grid gap-4 d-md-flex justify-content-md-start mb-5">
-            <a href="https://open.kakao.com/me/koderpark" target="_blank" class="contact"><img src="/asset/icon/kakao.png" class="img-fluid rounding"></a>
-            <a href="https://twitter.com/koder0205" target="_blank" class="contact"><img src="/asset/icon/twitter.png" class="img-fluid rounding"></a>
-            <a href="https://www.facebook.com/profile.php?id=100020063651123" target="_blank" class="contact"><img src="/asset/icon/facebook.png" class="img-fluid rounding"></a>
-            <a href="https://www.acmicpc.net/user/koder0205" target="_blank" class="contact"><img src="/asset/icon/boj.svg" class="img-fluid rounding"></a>
-            <a href="https://solved.ac/profile/koder0205" target="_blank" class="contact"><img src="/asset/icon/solvedac.svg" class="img-fluid rounding"></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <!-- 이력 -->
-    <div class="container-fluid p-5 rounding my-5 bg-dark text-white" id="resume">
+    <div class="container-fluid paddx rounding my-5 bg-dark text-white" id="resume">
       <h1 class="display-5 fw-bold lh-1 mb-5">이력</h1>
-      <h4>학력</h4>
-      <p class="lead mb-5">
+      <h3>학력</h3>
+      <p class="lead mb-5 wb">
         아름고등학교 2학년 재학중
       </p>
-      <h4>교육/캠프 수료</h4>
+      <h3>교육/캠프 수료</h3>
       <p class="lead mb-5 wb">
         2015 삼성 주니어 소프트웨어 아카데미 수료<br />
         2017 공주대학교 과학영재교육원 정보반 수료<br />
         2018 세종과학예술영재학교 영재교육원 소프트웨어반 수료<br />
-        2018 한국정보올림피아드 대비 캠프 수료<br />
-        2020 국제정보올림피아드 처음반 수료
+        2020 제 30기 국제정보올림피아드 여름학교 수료<br />
+        2021 제 30기 국제정보올림피아드 겨울학교 수료
       </p>
-      <h4>경험</h4>
+      <h3>경험</h3>
       <p class="lead mb-5 wb">
-        2018 KOI 본선진출<br />
-        2020 국민대 알고리즘 대회 본선진출<br />
-        2021 아시아태평양 정보올림피아드 참가<br />
+        2021 지금 이 페이지 제작<br/>
         2021 교내 인트라넷 서비스 제작<br />
       </p>
-      <h4>기술</h4>
+      <h3>기술</h3>
       <p class="lead wb">
         C / Cpp - 알고리즘 문제풀이를 할때 사용합니다. 제일 숙련되어있습니다.<br />
         php - 간단한 웹은 php로 작성하고는 합니다.<br />
         node.js / C# / python - 공식문서나 책을 옆에 끼고있으면 작성할 수 있습니다.
       </p>
     </div>
-
+    
+    <!-- PS러 박성훈 -->
+    <div class="container-fluid paddx my-5" id="who">
+      <div class="row flex-lg-row-reverse align-items-center">
+        <div class="col-lg-5 my-5">
+          <img src="/asset/img/algorithm.png" class="leftimgsize img-fluid rounding">
+        </div>
+        <div class="col-lg-7 my-5">
+          <h1 class="display-5 fw-bold lh-1 mb-3">알고리즘 문제풀이</h1>
+          <p class="lead wb">
+            알고리즘 문제풀이를 합니다.<br />
+            주로 사용하는 언어는 C / Cpp 입니다<br />
+            실력은 부족하지만 다양한 활동에 열심히 참여하고 있습니다.<br />
+          </p>
+          <p class="lead wb">
+            코드업에서 문제풀이를 간혹 하고,<br />
+            현재는 백준에서 문제풀이 중입니다.<br />
+            Codeforces에도 관심이 있습니다만 체력이 부족하네요<br />
+          </p>
+          <p class="lead wb">
+            카카오톡 오픈채팅방<br />
+            "알고리즘 폐관수련방" 을 운영 중입니다.<br />
+          </p>
+          <a href="https://open.kakao.com/o/gPS4w1xc" target="_blank" class="btn btn-dark btn-lg px-4 me-md-2">알고리즘 폐관수련방</a>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 수상기록 -->
+    <div class="container-fluid rounding paddx bg-light">
+      <h1 class="display-5 fw-bold lh-1 mb-3 ">수상기록</h1>
+      <p class="lead">
+        순수한 자랑 97%와<br />
+        기만 3%가 함께하는 수상기록들<br />
+        옆으로 밀어 더 볼 수 있어요
+      </p>
+      <div class="row flex-nowrap scrollh" data-flickity='{ "prevNextButtons": false, "wrapAround": true, "pageDots": false, "cellAlign":"left", "autoPlay": 2000 }'>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/gold.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">금상</h5>
+            <p class="card-text wb">2018 세종 정보올림피아드</p>
+          </div>
+        </div>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/silver.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">은상</h5>
+            <p class="card-text wb">2020 세종 정보올림피아드</p>
+          </div>
+        </div>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/silver.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">은상</h5>
+            <p class="card-text wb">2019 세종 정보올림피아드</p>
+          </div>
+        </div>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/silver.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">은상</h5>
+            <p class="card-text wb">2016 충남 정보올림피아드</p>
+          </div>
+        </div>
+        
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/bronze.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">동상</h5>
+            <p class="card-text wb">2018 한국 정보올림피아드</p>
+          </div>
+        </div>
+        
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/cert.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">참가 ( #xxx등 )</h5>
+            <p class="card-text wb">2021 아시아-태평양 정보올림피아드</p>
+          </div>
+        </div>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/cert.png" class="card-img-top rounding imgsize" >
+          <div class="card-body">
+            <h5 class="card-title">장려상</h5>
+            <p class="card-text wb">2021 한국 정보올림피아드</p>
+          </div>
+        </div>
+        <div class="card prize rounding border-light m-3 p-0">
+          <img src="/asset/prize/cert.png" class="card-img-top rounding imgsize">
+          <div class="card-body">
+            <h5 class="card-title">장려상</h5>
+            <p class="card-text wb">2020 국민대 알고리즘 대회</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 프로그래밍 하는 박성훈 -->
+    <div class="container-fluid paddx my-5" id="who">
+      <div class="row flex-lg-row-reverse align-items-center">
+        <div class="col-lg-5 my-5">
+          <img src="/asset/img/programming.png" class="leftimgsize img-fluid rounding">
+        </div>
+        <div class="col-lg-7 my-5">
+          <h1 class="display-5 fw-bold lh-1 mb-3">프로그래밍</h1>
+          <p class="lead wb">
+            프로그래밍을 합니다.<br />
+            카페인을 마시고 코드를 내보냅니다.<br />
+          </p>
+          <p class="lead wb">
+            중학생때 php로 프로그래밍을 시작했으며,<br />
+            현재는 보시다시피 웹개발을 해보고 있습니다.<br />
+            Node.js 같은 기술들을 배우고 있습니다.<br />
+          </p>
+          <p class="lead wb">
+            이와는 별도로 C#개발도 해보고 있습니다.<br />
+            거창한 것들을 만드는건 아니고<br />
+            쓸데없는 이상한것들 만들때 주로 사용합니다.<br />
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- 박성훈이 싼 소스들 -->
+    <div class="container-fluid paddx rounding my-5 bg-light">
+      <h1 class="display-5 fw-bold lh-1 mb-3">만든 프로그램들</h1>
+      <p class="lead mb-5">
+        블로그에 자세한 설명이 있어요<br />
+        아직 만든게 몇개 없네요 :(
+      </p>
+    </div>
+    
     <!-- 타임라인 페이지 -->
-    <div class="container-fluid p-5 my-5">
+    <div class="container-fluid paddx my-5">
       <h1 class="display-5 fw-bold lh-1 mb-3">타임라인</h1>
       <p class="lead">
         tmi 잔뜩 들어간 프로그래밍 연대기<br />
@@ -124,8 +238,9 @@
         </a>
         <a href="https://blog.koderpark.dev" target="_blank" class="btn btn-outline-dark btn-lg px-4">블로그</a>
       </div>
-      <div class="collapse my-5 " id="timeline">
-        <div class="p-5 mb-4 bg-light rounding">
+      <div class="collapse my-5" id="timeline">
+        
+        <div class="paddx my-4 bg-light rounding">
           <h1 class="fw-bold lh-1 mb-3">2015년</h1>
           <p class="lead wb">
             초등학교 5학년<br />
@@ -135,7 +250,7 @@
           </p>
         </div>
 
-        <div class=" p-5 my-4 bg-light rounding row">
+        <div class="paddx my-4 bg-light rounding">
           <h1 class="fw-bold lh-1 mb-3">2016년</h1>
           <p class="lead wb">
             초등학교 6학년<br />
@@ -144,7 +259,7 @@
           </p>
         </div>
 
-        <div class="p-5 my-4 bg-light rounding row">
+        <div class="paddx my-4 bg-light rounding">
           <h1 class="fw-bold lh-1 mb-3">2017년</h1>
           <p class="lead wb">
             중학교 1학년<br />
@@ -152,7 +267,7 @@
           </p>
         </div>
 
-        <div class="p-5 my-4 bg-dark text-white rounding row">
+        <div class="paddx my-4 bg-dark text-white rounding">
           <h1 class="fw-bold lh-1 mb-3">2018년</h1>
           <p class="lead wb">
             중학교 2학년<br />
@@ -161,7 +276,7 @@
           </p>
         </div>
 
-        <div class="p-5 my-4 bg-light rounding row">
+        <div class="paddx my-4 bg-light rounding">
           <h1 class="fw-bold lh-1 mb-3">2019년</h1>
           <p class="lead wb">
             중학교 3학년<br />
@@ -170,17 +285,16 @@
           </p>
         </div>
 
-        <div class="p-5 my-4 bg-dark text-white rounding row">
+        <div class="paddx my-4 bg-dark text-white rounding">
           <h1 class="fw-bold lh-1 mb-3">2020년</h1>
           <p class="lead wb">
             고등학교 1학년<br />
             국제정올 여름학교 수업을 수강했다.<br />
             국민대 알고리즘 대회에서 성과를 거둠.<br />
-
           </p>
         </div>
 
-        <div class="p-5 mt-4 bg-dark text-white rounding row">
+        <div class="paddx mt-4 bg-dark text-white rounding">
           <h1 class="fw-bold lh-1 mb-3">2021년</h1>
           <p class="lead wb">
             고등학교 2학년<br />
@@ -191,35 +305,34 @@
         </div>
       </div>
     </div>
-
-    <!-- 수상기록 -->
-    <div class="container-fluid rounding my-5 bg-light">
-      <h1 class="display-5 fw-bold lh-1 mb-3 mx-5 pt-5">수상기록</h1>
-      <p class="lead pb-5 mx-5">
-        순수한 자랑 97%와<br />
-        기만 3%가 함께하는 수상기록들
-      </p>
-      <div class="container-fluid">
-      </div>
-
-      <!-- 박성훈이 싼 소스들 -->
-      <div class="container-fluid p-5 rounding my-5 bg-light">
-        <h1 class="display-5 fw-bold lh-1 mb-3">만든 프로그램들</h1>
-        <p class="lead mb-5">
-          블로그에 자세한 설명이 있어요<br />
-          아직 만든게 몇개 없네요 :(
-        </p>
-      </div>
-
-      <div class="container-fluid p-5 bg-dark text-white text-center">
+    
+    <!-- 박성훈의 개인정보 -->
+    <div class="container-fluid paddx my-5" id="contact">
+      <div class="row flex-lg-row align-items-center">
+        <h1 class="display-5 fw-bold lh-1">연락처</h1>
         <p class="lead">
-          © 2021 Koderpark
+          아싸 프로그래머와 친구가 되어주세요!<br />
         </p>
+        <div class="container-fluid mb-5">
+          <a href="https://open.kakao.com/me/koderpark" target="_blank"><img src="/asset/icon/kakao.png" class="img-fluid rounding contact m-3"></a>
+          <a href="https://twitter.com/koder0205" target="_blank"><img src="/asset/icon/twitter.png" class="img-fluid rounding contact m-3"></a>
+          <a href="https://www.facebook.com/profile.php?id=100020063651123" target="_blank"><img src="/asset/icon/facebook.png" class="img-fluid rounding contact m-3"></a>
+          <a href="https://www.acmicpc.net/user/koder0205" target="_blank"><img src="/asset/icon/boj.svg" class="img-fluid rounding contact m-3"></a>
+          <a href="https://solved.ac/profile/koder0205" target="_blank"><img src="/asset/icon/solvedac.svg" class="img-fluid rounding contact m-3"></a>
+        </div>
       </div>
+    </div>
   </main>
-
-
+  
+  <footer>
+    <div class="container-fluid paddx bg-dark text-white text-center">
+      <p class="lead">
+        © 2021 Koderpark
+      </p>
+    </div>
+  </footer>
+  
+  
+  <script src="asset/bootstrap/js/flickity.pkgd.min.js"></script>
   <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
-</body>
-
-</html>
+</body></html>
