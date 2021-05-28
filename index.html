@@ -121,7 +121,7 @@
         옆으로 밀어 더 볼 수 있어요
       </p>
       <!-- "cellAlign":"left", -->
-      <div class="row flex-nowrap scrollh" data-flickity='{ "prevNextButtons": false, "wrapAround": true, "pageDots": false, "autoPlay": 2000, "imagesLoaded": true }'>
+      <div class="row flex-nowrap scrollh flickity">
         <div class="card prize rounding border-light m-3 p-0">
           <img src="/asset/prize/gold.png" class="card-img-top rounding imgsize">
           <div class="card-body">
@@ -225,7 +225,7 @@
         아직 만든게 몇개 없네요 :(<br />
         이미지를 클릭 시 자세하게 설명해둔 블로그로 이동합니다.
       </p>
-      <div class="row" data-masonry='{"percentPosition": true , "imagesLoaded":true}'>
+      <div class="row masonry">
         <a class="col-sm-6 col-md-4 col-lg-3 p-4" href="https://blog.koderpark.dev/19" target="_blank">
           <img src="asset/program/kakaobot.png" class="vw-100 img-fluid rounding">
         </a>
@@ -349,10 +349,30 @@
       </p>
     </div>
   </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
+  
+  <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
   <script src="asset/bootstrap/js/flickity.pkgd.min.js"></script>
   <script src="asset/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    var $grid = $('.masonry').imagesLoaded( function() {
+      $grid.masonry({
+        percentPosition: true
+      });
+    });
+    // data-flickity='{ "prevNextButtons": false, "wrapAround": true, "pageDots": false, "autoPlay": 2000, "imagesLoaded": true }'
+    var $flickity = $('.flickity').imagesLoaded( function() {
+      $flickity.flickity({
+        prevNextButtons: false,
+        wrapAround: true,
+        pageDots: false,
+        autoPlay: 2000,
+      })
+    });
+  </script>
+  
 </body>
 
 </html>

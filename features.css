@@ -1,33 +1,3 @@
-.programlist{
-  background-image: rgba(0,0,0,0.2);
-}
-
-
-.leftimgsize{
-  width: 100vw;
-}
-
-.paddx{
-  padding: 48px;
-}
-
-.prize{
-  width: 232px;
-}
-
-.wb {
-  word-break: keep-all;
-}
-
-.rounding {
-  border-radius: 40px;
-}
-
-.contact {
-  width: 128px;
-  height: 128px;
-}
-
 .top-content .carousel-item {
   height: 100vh;
   min-height: 400px;
@@ -35,6 +5,21 @@
   background-size: cover;
   background-image: url(./asset/background.png);
   background-position: center;
+}
+
+.leftimgsize { width: 100vw; }
+
+.paddx { padding: 48px; }
+
+.prize { width: 232px; }
+
+.wb { word-break: keep-all; }
+
+.rounding { border-radius: 40px; }
+
+.contact {
+  width: 128px;
+  height: 128px;
 }
 
 
