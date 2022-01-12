@@ -1,0 +1,36 @@
+:root{
+    --
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    background-color: #000;
+    color: #fff;
+}
+
+#lib-theme{
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    
+
+    background-color: #fff;
+    border-radius: 2rem;
+}
+
+#lib-theme-light{
+    
+}
+
+
+.lib-theme{
+    width: 2rem;
+    height: 2rem;
+    background: dimgrey;
+    border: none;
+    margin: 1rem;
+    border-radius: 2rem;
+
+}
