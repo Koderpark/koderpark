@@ -1,5 +1,3 @@
-![header](https://capsule-render.vercel.app/api?type=wave&color=gradient&height=300&section=header&text=Koder0205)
-
 ## 일반계 고등학교 3학년 학생입니다!
 
 [![Github Stats](https://github-readme-stats.vercel.app/api?username=koder0205&hide=contribs)](https://github.com/anuraghazra/github-readme-stats)
