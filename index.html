@@ -1,7 +1,9 @@
-<html lang="ko">
+<html lang="ko" color="light">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=0.9">
+        <meta name="theme-color" id="mobilebar" content="#16161E">
+        <meta name="color-scheme" content="dark light"/>
 
         <title>Koder / 박성훈</title>
         
@@ -10,6 +12,8 @@
         <link rel="stylesheet" type="text/css" href="https://ui.koderpark.dev/css/color.css">
         <link rel="stylesheet" type="text/css" href="https://ui.koderpark.dev/css/contact.css">
         <link rel="stylesheet" type="text/css" href="./lib/main.css">
+
+        <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     </head>
     
     <body class="lib-bg2 lib-font-medium">
@@ -20,10 +24,10 @@
             </div>
         </div>
 
-        <div class="container vh-100">
-            <div class="row g-3">
+        <div class="container">
+            <div class="row g-3 mb-3">
                 <div class="col-lg-6">
-                    <div class="lib-bg1 lib-shadow p-3 mb-3">
+                    <div class="lib-bg1 lib-shadow p-3 mb-3 h-100">
                         <h1 class="mb-3">그래서 박성훈이 누구죠?</h1>
                         <div class="ps-4">
                             <p class="lead mb-3">
@@ -64,18 +68,15 @@
                             </p>
                             <div class="iconlist">
                                 <div class=""><a class="icon64 contact-email" href="mailto:koder0205@gmail.com"></a></div>
-                                <div class=""><a class="icon64 contact-kakao" href="#"></a></div>
-                                <div class=""><a class="icon64 contact-twitter" href="#"></a></div>
+                                <div class=""><a class="icon64 contact-kakao" href="https://open.kakao.com/me/koderpark"></a></div>
+                                <div class=""><a class="icon64 contact-twitter" href="https://twitter.com/koder0205"></a></div>
                                 <div class=""><a class="icon64 contact-discord" href="#"></a></div>
-                                <div class=""><a class="icon64 contact-github" href="#"></a></div>
+                                <div class=""><a class="icon64 contact-github" href="https://github.com/Koder0205"></a></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <div class="container vh-100">
             <div class="lib-bg1 lib-shadow p-3">
                 <div class="row">
                     <div class="col-lg-6 mb-5 mb-lg-0">
@@ -110,15 +111,109 @@
             </div>
         </div>
 
-        <div class="vh-100">
-            <div class="lib-bg1 lib-shadow p-3">
-                <div class="container">
-                    <h1 class="mb-3">수상기록</h1>
+        <div class="vh-100 d-flex align-items-center">
+            <div class="lib-bg1 lib-shadow p-3 w-100">
+                <div class="container mb-3">
+                    <h1 class="mb-3">대회 실적</h1>
+                    <div class="mb-3 d-inline-block">
+                        <h4 class="p-1 lib-bg-rev mb-3 d-inline-block"><input type="checkbox">checkbox 테스트 1번이 좀더 김</h4><br/>
+
+                        <h4 class="p-1 lib-bg-rev d-inline-block"><input type="checkbox">checkbox 테스트 2번</h4>
+                    </div>
                 </div>
-                <div class="row">
-                    
+
+                <div class="prizelist">
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/gold.png" class="">
+                        <h4>금상</h4>
+                        <p>
+                            2018<br/>
+                            세종 정보올림피아드
+                        </p>
+                    </div>
+
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
+                        <h4>은상</h4>
+                        <p>
+                            2020<br/>
+                            세종 정보올림피아드<br/>
+                            <a href="https://blog.koderpark.dev/89">후기글</a>
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
+                        <h4>은상</h4>
+                        <p>
+                            2019<br/>
+                            세종 정보올림피아드
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
+                        <h4>은상</h4>
+                        <p>
+                            2016<br/>
+                            충남 정보올림피아드
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src="https://ui.koderpark.dev/img/prize/silver.png" class="">
+                        <h4>은상</h4>
+                        <p>
+                            2015<br/>
+                            충남 청소년과학탐구 예선대회
+                        </p>
+                    </div>
+            
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/bronze.png" class="">
+                        <h4>동상</h4>
+                        <p>
+                            2018<br/>
+                            한국 정보올림피아드
+                        </p>
+                    </div>
+                
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
+                        <h4>전체 #187등</h4>
+                        <p>
+                            2021<br/>
+                            아시아-태평양 정보올림피아드<br/>
+                            unofficial results 기준
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
+                        <h4>장려상</h4>
+                        <p>
+                            2021<br/>
+                            한국 정보올림피아드 1차대회<br/>
+                            <a href="https://blog.koderpark.dev/36">후기글</a>
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
+                        <h4>장려상</h4>
+                        <p>
+                            2020<br/>
+                            국민대 알고리즘 대회<br/>
+                            <a href="https://blog.koderpark.dev/34">후기글</a> / <a href="https://blog.koderpark.dev/33">예선 후기글</a>
+                        </p>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="container vh-100">
+            <div class="lib-bg1 lib-shadow h-50">
+                lorem ipsum dolor sit amet
+            </div>
+        </div>
+        
+        <div class="lib-bg1 lib-shadow text-center p-3">
+            2022 koderpark.dev
         </div>
     </body>
     
@@ -128,4 +223,19 @@
     </div>
     <script type="text/javascript" src="https://ui.koderpark.dev/bootstrap/min.js"></script>
     <script type="text/javascript" src="https://ui.koderpark.dev/js/color.js"></script>
+
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <script>
+        var elem = document.querySelector('.prizelist');
+        var flkty = new Flickity( elem, {
+            cellAlign: 'left',
+            wrapAround: true,
+            contain: true,
+            prevNextButtons: false,
+            pageDots: false,
+            autoPlay: 2000,
+            pauseAutoPlayOnHover: false
+        });
+    </script>
 </html>

@@ -10,12 +10,24 @@
     object-fit: cover;
 }
 
+.img64{
+    width: 80px;
+    height: 80px;
+    padding: 8px;
+    float:right;
+}
+
 .icon64{
-    display:inline-block;
+    display: inline-block;
     width: 64px;
     height: 64px;
 }
 
 .iconlist div{
     display: inline-block;
+}
+
+.prizeitem{
+    width: 320px;
+    height: 128px;
 }
