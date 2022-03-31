@@ -23,6 +23,10 @@
     height: 64px;
 }
 
+.iconlist{
+    height: 64px;
+}
+
 .iconlist div{
     display: inline-block;
 }
