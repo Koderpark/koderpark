@@ -1,4 +1,4 @@
-<html lang="ko" color="light">
+<html lang="ko">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=0.9">
@@ -50,9 +50,9 @@
                         <h1 class="mb-3">학력</h1>
 
                         <ul class="ul-square ps-4">
-                            <li>
+                            <li class="mb-3">
                                 <h5>아름고등학교 ( 2020 ~ 2022 )</h5>
-                                <p class="mb-3">올해 졸업예정입니다.</p>
+                                <p>올해 졸업예정입니다.</p>
                             </li>
                             <li>
                                 <h5>아름중학교 ( 2017 ~ 2019 )</h5>
@@ -61,17 +61,26 @@
                     </div>
 
                     <div class="lib-bg1 lib-shadow p-3">
-                        <h1 class="mb-3">연락처/URL</h1>
+                        <h1 class="mb-3">연락처 / URL</h1>
                         <div>
-                            <p class="lead mb-3 ps-4">
-                                koder0205@gmail.com<br/>
-                            </p>
-                            <div class="iconlist">
-                                <div class=""><a class="icon64 contact-email" href="mailto:koder0205@gmail.com"></a></div>
-                                <div class=""><a class="icon64 contact-kakao" href="https://open.kakao.com/me/koderpark"></a></div>
-                                <div class=""><a class="icon64 contact-twitter" href="https://twitter.com/koder0205"></a></div>
-                                <div class=""><a class="icon64 contact-discord" href="#"></a></div>
-                                <div class=""><a class="icon64 contact-github" href="https://github.com/Koder0205"></a></div>
+                            <ul class="ul-square ps-4 mb-3">
+                                <li class="mb-3">
+                                    <h5>이메일</h5>
+                                    <p>koder0205@gmail.com</p>
+                                </li>
+                                <li>
+                                    <h5>디스코드</h5>
+                                    <p>Koder / 박성훈#1974</p>
+                                </li>
+                            </ul>
+                            <div class="lib-bg2 iconlist p-2">
+                                <a target='_blank' class="icon64 contact-kakao" href="https://open.kakao.com/me/koderpark"></a>
+                                <a target='_blank' class="icon64 contact-twitter" href="https://twitter.com/koder0205"></a>
+
+                                <!--<div class=""><a target='_blank' class="icon64 contact-discord" href="#"></a></div>-->
+
+                                <a target='_blank' class="icon64 contact-github" href="https://github.com/Koder0205"></a>
+                                <a target='_blank' class="icon64 contact-tistory" href="https://blog.koderpark.dev"></a>
                             </div>
                         </div>
                     </div>
@@ -84,7 +93,7 @@
                         <ul class="ul-square ps-4">
                             <li>
                                 <h5>2020 제 30기 국제정보올림피아드 처음반 수료</h5>
-                                <p class="mb-3">알고리즘 이론 및 문제해결 <a href="https://blog.koderpark.dev/35">후기글</a></p>
+                                <p class="mb-3">알고리즘 이론 및 문제해결 <a target='_blank' href="https://blog.koderpark.dev/35">후기글</a></p>
                             </li>
                             <li>
                                 <h5>2018 세종과학예술영재학교 영재교육원 소프트웨어반 수료</h5>
@@ -114,18 +123,37 @@
         <div class="vh-100 d-flex align-items-center">
             <div class="lib-bg1 lib-shadow p-3 w-100">
                 <div class="container mb-3">
-                    <div class="p-3">
+                    <div class="p-0 p-lg-3">
                         <h1 class="mb-3">대회 실적</h1>
-                        <div class="d-inline-block">
-                            <h4 class="p-1 lib-bg-rev mb-3 d-inline-block"><input type="checkbox">checkbox 테스트 1번이 좀더 김</h4><br/>
-
-                            <h4 class="p-1 lib-bg-rev d-inline-block"><input type="checkbox">checkbox 테스트 2번</h4>
+                        <div class="mb-3">
+                            <h5 class="lib-bg-rev d-inline-block px-2 py-1">
+                                <label for="chkadult">
+                                    <input type="checkbox" onclick="renewprize()" id="chkadult">
+                                    대학부 / 성인부 실적 포함하기
+                                </label>
+                            </h5>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="lib-bg-rev d-inline-block px-2 py-1">
+                                <label for="chkhigh">
+                                    <input type="checkbox" onclick="renewprize()" id="chkhigh" checked>
+                                    고등부 실적 포함하기
+                                </label>
+                            </h5>
+                        </div>
+                        <div class="mb-3">
+                            <h5 class="lib-bg-rev d-inline-block px-2 py-1">
+                                <label for="chkyoung">
+                                    <input type="checkbox" onclick="renewprize()" id="chkyoung"  checked>
+                                    초중등부 실적 포함하기
+                                </label>
+                            </h5>
                         </div>
                     </div>
                 </div>
 
                 <div class="prizelist">
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizeyoung  prizehidden">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/gold.png" class="">
                         <h4>금상</h4>
                         <p>
@@ -134,24 +162,33 @@
                         </p>
                     </div>
 
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizehigh">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
+                        <h4>은상</h4>
+                        <p>
+                            2021<br/>
+                            세종해커톤<br/>
+                        </p>
+                    </div>
+                    <div class="prizeitem lib-bg2 prizehigh">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
                         <h4>은상</h4>
                         <p>
                             2020<br/>
                             세종 정보올림피아드<br/>
-                            <a href="https://blog.koderpark.dev/89">후기글</a>
+                            <a target='_blank' href="https://blog.koderpark.dev/89">후기글</a>
                         </p>
                     </div>
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <!--<div class="prizeitem lib-bg2">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
                         <h4>은상</h4>
                         <p>
                             2019<br/>
-                            세종 정보올림피아드
+                            세종 정보올림피아드<br/>
+                            <a target='_blank' href="https://blog.koderpark.dev/89">후기글</a>
                         </p>
-                    </div>
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    </div>-->
+                    <div class="prizeitem lib-bg2 prizeyoung">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/silver.png" class="">
                         <h4>은상</h4>
                         <p>
@@ -159,16 +196,17 @@
                             충남 정보올림피아드
                         </p>
                     </div>
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+
+                    <div class="prizeitem lib-bg2 prizeyoung">
                         <img class="img64 lib-bg1 lib-shadow" src="https://ui.koderpark.dev/img/prize/silver.png" class="">
-                        <h4>은상</h4>
+                        <h4>동상</h4>
                         <p>
                             2015<br/>
                             충남 청소년과학탐구 예선대회
                         </p>
                     </div>
             
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizeyoung">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/bronze.png" class="">
                         <h4>동상</h4>
                         <p>
@@ -177,7 +215,7 @@
                         </p>
                     </div>
                 
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizehigh">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
                         <h4>전체 #187등</h4>
                         <p>
@@ -186,22 +224,41 @@
                             unofficial results 기준
                         </p>
                     </div>
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizehigh">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
                         <h4>장려상</h4>
                         <p>
                             2021<br/>
                             한국 정보올림피아드 1차대회<br/>
-                            <a href="https://blog.koderpark.dev/36">후기글</a>
+                            <a target='_blank' href="https://blog.koderpark.dev/36">후기글</a>
                         </p>
                     </div>
-                    <div class="prizeitem lib-bg2 p-3 mx-2">
+                    <div class="prizeitem lib-bg2 prizehigh">
                         <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
                         <h4>장려상</h4>
                         <p>
                             2020<br/>
                             국민대 알고리즘 대회<br/>
-                            <a href="https://blog.koderpark.dev/34">후기글</a> / <a href="https://blog.koderpark.dev/33">예선 후기글</a>
+                            <a target='_blank' href="https://blog.koderpark.dev/34">후기글</a> / <a target='_blank' href="https://blog.koderpark.dev/33">예선 후기글</a>
+                        </p>
+                    </div>
+
+                    <div class="prizeitem lib-bg2 prizehigh">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
+                        <h4>장려상</h4>
+                        <p>
+                            2021<br/>
+                            국민대 알고리즘 대회<br/>
+                            <a target='_blank' href="https://blog.koderpark.dev/34">후기글</a> / <a target='_blank' href="https://blog.koderpark.dev/33">예선 후기글</a>
+                        </p>
+                    </div>
+
+                    <div class="prizeitem lib-bg2 prizeyoung">
+                        <img class="img64 lib-bg1 lib-shadow" src=" https://ui.koderpark.dev/img/prize/cert.png" class="">
+                        <h4>등급 없음</h4>
+                        <p>
+                            2016<br/>
+                            미래창조과학부 과학의 날 기념<br/>
                         </p>
                     </div>
                 </div>
@@ -211,7 +268,7 @@
         <div class="container">
             <div class="lib-bg1 lib-shadow p-3 mb-3">
                 <div class="row">
-                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
                         <h1 class="">알고리즘 문제풀이</h1>
                         <div class="p-3">
                             <p class="lead mb-3">
@@ -226,12 +283,10 @@
                                 Codeforces도 관심이 있는데 체력이 부족하네요
                             </p>
                         </div>
-                        <div class="iconlist">
-                            <div class=""><a class="icon64 contact-email" href="mailto:koder0205@gmail.com"></a></div>
-                            <div class=""><a class="icon64 contact-kakao" href="https://open.kakao.com/me/koderpark"></a></div>
-                            <div class=""><a class="icon64 contact-twitter" href="https://twitter.com/koder0205"></a></div>
-                            <div class=""><a class="icon64 contact-discord" href="#"></a></div>
-                            <div class=""><a class="icon64 contact-github" href="https://github.com/Koder0205"></a></div>
+                        <div class="lib-bg2 iconlist p-2">
+                            <a target='_blank' class="icon64 ps-solvedac" href="https://solved.ac/profile/koder0205"></a>
+                            <a target='_blank' class="icon64 ps-boj" href="https://www.acmicpc.net/user/koder0205"></a>
+                            <a target='_blank' class="icon64 ps-codeup" href="https://codeup.kr/userinfo.php?user=koder0205"></a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -242,11 +297,11 @@
 
             <div class="lib-bg1 lib-shadow p-3">
                 <div class="row">
-                    <div class="col-lg-6">
+                    <div class="col-lg-6 mb-3 mb-lg-0">
                         <div class="p-1 lib-bg-rev h-100 img-full-box"><img src="./asset/programming.png" class="img-full"></div>
                     </div>
 
-                    <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="col-lg-6">
                         <h1 class="">프로그래밍</h1>
                         <div class="p-3">
                             <p class="lead mb-3">
@@ -260,38 +315,133 @@
                                 아마 심한 카페인 중독일거에요.
                             </p>
                             <p class="lead">
-                                가끔 <a href="#">외주</a>를 뛰기도 합니다.
+                                가끔 <a target='_blank' href="#">외주</a>를 뛰기도 합니다.
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="h-25"></div>
+        <div class="w-100 lib-bg1 pt-3">
+            <div class="container">
+                <h1>프로젝트 / 프로그램</h1>
+            </div>
+            <div class="container">
+                <div class="row row-cols-2 row-cols-lg-3 g-3 py-3" data-masonry='{"percentPosition": true,  "itemSelector": ".col" }'>
+                    <div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/areumin.png" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">아름고등학교 인트라넷 아름인</h5>
+                                <p class="">
+                                    교내 <a target='_blank' href="https://blog.koderpark.dev/203">여러 정보</a>의 접근성을 높여줍니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/koderui.png" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">KoderUI</h5>
+                                <p class="">
+                                    디자인을 통일하기 위한 개인 <a target='_blank' href="https://ui.koderpark.dev">라이브러리</a> 입니다.<br/>
+                                    지금 이 페이지 역시 KoderUI의 적용을 받습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/chatbot.png" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">아름중-챗봇 (deprecated)</h5>
+                                <p class="">
+                                    아름인 이전에 만들었던 프로그램입니다.<br/>
+                                    현재는 API의 변경으로 작동하지 않습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/iotschool.jpg" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">IOT 학교</h5>
+                                <p class="">
+                                    동아리 활동으로 진행했습니다.<br/>
+                                    전반적인 프로젝트의 방향을 설정하고<br/>
+                                    아두이노를 활용해 제작했습니다
+                                </p>
+                            </div>
+                        </div>
+                    </div>-->
+
+                    <div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/repeater.jpg" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">블루투스 리피터</h5>
+                                <p class="">
+                                    블루투스의 송신거리 연장을 주제로 연구했습니다<br/>
+                                    블루투스 중계기의 역할을 할 수 있는 모듈을<br/>
+                                    아두이노를 활용해 제작했습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="lib-bg-rev">
+                            <img src="./asset/program/hacking.png" class="img-full p-1">
+                            <div class="p-3">
+                                <h5 class="mb-1">모의해킹</h5>
+                                <p class="">
+                                    xss와 sql인젝션 두가지에 대한<br/>
+                                    모의해킹을 진행하며<br/>
+                                    php로 모의해킹해볼수 있는 환경을<br/>
+                                    구축했습니다.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         
+        </div>
+        
+        <div class="h-25"></div>
+
         <div class="lib-bg1 lib-shadow text-center p-3">
             2022 koderpark.dev
         </div>
     </body>
     
-    <div id="color-changer" class="lib-bg1 lib-shadow r1">
+    <div id="color-changer" class="lib-bg1 lib-shadow">
         <button id="color-light"></button>
         <button id="color-dark"></button>
     </div>
     <script type="text/javascript" src="https://ui.koderpark.dev/bootstrap/min.js"></script>
     <script type="text/javascript" src="https://ui.koderpark.dev/js/color.js"></script>
+    <script type="text/javascript" src="./lib/main.js"></script>
 
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
 
     <script>
-        var elem = document.querySelector('.prizelist');
-        var flkty = new Flickity( elem, {
+        var option = {
             cellAlign: 'left',
-            wrapAround: true,
             contain: true,
             prevNextButtons: false,
             pageDots: false,
-            autoPlay: 2000,
             pauseAutoPlayOnHover: false
-        });
+        }
+        var flkty = new Flickity( document.querySelector('.prizelist'), option);
     </script>
 </html>
