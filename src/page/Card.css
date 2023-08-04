@@ -1,0 +1,27 @@
+.card-wrapper {
+  width: 450px;
+  height: 250px;
+
+  transform-style: preserve-3d;
+  transition: transform 500ms;
+
+  position: relative;
+}
+
+.card-wrapper:hover {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0px;
+}
+
+.card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
