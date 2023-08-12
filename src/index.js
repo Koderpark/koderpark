@@ -3,8 +3,11 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import Hero from "./page/Hero.js";
-import Sysadmin from "./page/Sysadmin.js";
+import BusinessCard from "./page/BusinessCard.js";
+import Prize from "./page/Prize.js";
+import Interest from "./page/Interest.js";
 import reportWebVitals from "./reportWebVitals";
+import Timeline from "./page/Timeline.js";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
@@ -16,8 +19,11 @@ root.render(
       />
     </head>
     <Hero />
-    <Sysadmin />
-    <App />
+    <BusinessCard />
+
+    <Timeline />
+    <Interest />
+    <Prize />
   </React.StrictMode>
 );
 

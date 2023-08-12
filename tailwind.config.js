@@ -9,4 +9,12 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  safelist: [
+    {
+      pattern: /grid-cols-%d/,
+    },
+    {
+      pattern: /bg-(red|blue|yellow)-(100|200|300|400)/,
+    },
+  ],
 };
