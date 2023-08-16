@@ -1,6 +1,6 @@
-import "../style/Hero.css";
-import Profile from "../images/profile/256x dark.png";
-import { BOJ, CF, SOLVEDAC, X, GITHUB, KAKAOTALK } from "../images/social/";
+import "../../style/Hero.css";
+import Profile from "../../images/profile/256x dark.png";
+import { BOJ, CF, SOLVEDAC, X, GITHUB, KAKAOTALK } from "../../images/social";
 
 function Hero() {
   return (

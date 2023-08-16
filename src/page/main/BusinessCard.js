@@ -1,8 +1,8 @@
-import "../style/Card.css";
+import "../../style/Card.css";
 import { CSSTransition } from "react-transition-group";
 import { useState } from "react";
-import QR from "../images/QR.png";
-import Icon from "../images/profile/only.png";
+import QR from "../../images/QR.png";
+import Icon from "../../images/profile/only.png";
 
 import {
   EnvelopeIcon,
