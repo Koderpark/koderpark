@@ -34,7 +34,6 @@
 }
 
 .card {
-  @apply bg-slate-50 p-4;
   width: 100%;
   height: 100%;
 
@@ -82,4 +81,13 @@
 
 .flip-enter-done {
   transform: rotateY(0deg);
+}
+
+.title {
+  background: #d2daff;
+  background: linear-gradient(30deg, #d2daff 0%, #aac4ff 100%);
+}
+
+.qrcode {
+  width: 100px;
 }

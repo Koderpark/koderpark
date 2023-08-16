@@ -1,23 +1,26 @@
 import "../style/Hero.css";
+import Profile from "../images/profile/256x dark.png";
+import { BOJ, CF, SOLVEDAC, X, GITHUB, KAKAOTALK } from "../images/social/";
 
 function Hero() {
   return (
-    <div className="bg-slate-100 text-slate-950 h-screen px-24">
-      <div className="float-left w-fit h-full grid">
+    <div className="bg-slate-100 text-slate-950 h-screen">
+      <div className="float-left w-fit h-full grid title px-24">
         <div className="place-self-center w-full">
           <p className="text-4xl font-bold">2023</p>
           <p className="text-8xl font-bold">Portfolio</p>
           <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
 
           <p className="text-xl">2004년생 새내기 대학생입니다</p>
-          <p className="text-xl mb-4">코더빡이라고 불러주시면 됩니다</p>
+          <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
         </div>
       </div>
-      <div className="float-right w-fit h-full grid">
+      <div className="float-right w-fit h-full grid px-24">
         <div className="place-self-center grid grid-cols-2 gap-8">
           <div className="flex flex-col gap-8">
             <EduCard />
             <ActCard />
+            <SocialCard />
           </div>
           <div className="flex flex-col gap-8">
             <CntCard />
@@ -124,6 +127,40 @@ function SkillCard() {
       <div className="card-elem">
         <p>PHP</p>
         <p>외주작업을 맡아 처리한 경험이 있습니다</p>
+      </div>
+    </div>
+  );
+}
+
+function SocialCard() {
+  return (
+    <div className="w-fit">
+      <p className="text-4xl font-bold mb-4">Social</p>
+
+      <div className="grid grid-cols-4 gap-2 social">
+        <a target="_blank" href="https://www.acmicpc.net/user/koder0205">
+          <img src={BOJ} />
+        </a>
+
+        <a target="_blank" href="https://codeforces.com/profile/koderpark">
+          <img src={CF} />
+        </a>
+
+        <a target="_blank" href="https://solved.ac/profile/koder0205">
+          <img src={SOLVEDAC} />
+        </a>
+
+        <a target="_blank" href="https://twitter.com/koderpark">
+          <img src={X} />
+        </a>
+
+        <a target="_blank" href="https://github.com/Koderpark">
+          <img src={GITHUB} />
+        </a>
+
+        <a target="_blank" href="https://open.kakao.com/me/koderpark">
+          <img src={KAKAOTALK} />
+        </a>
       </div>
     </div>
   );
