@@ -3,26 +3,25 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Main from "./page/main";
-import Algorithm from "./page/algorithm";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Main />,
-  },
-  {
-    path: "/algorithm",
-    element: <Algorithm />,
-  },
-]);
+function App() {
+  const location = useLocation();
+  const background = location.state && location.state.background;
+
+  return (
+    <Routes>
+      <Route path="/" element={<Main />} />
+    </Routes>
+  );
+}
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <RouterProvider router={router} />
-  </React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function

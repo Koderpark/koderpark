@@ -1,0 +1,13 @@
+.carousel {
+  overflow: hidden;
+}
+
+.award-type {
+  width: 128px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.award-date {
+  line-height: 28px;
+}

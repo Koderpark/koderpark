@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 import Hero from "./Hero.js";
 import BusinessCard from "./BusinessCard.js";
 import Award from "./Award.js";

@@ -5,7 +5,8 @@ import { BOJ, CF, SOLVEDAC, X, GITHUB, KAKAOTALK } from "../../images/social";
 function Hero() {
   return (
     <div className="bg-slate-100 text-slate-950 h-screen">
-      <div className="float-left w-fit h-full grid title px-24">
+      <div className="float-left w-fit h-full grid px-24">
+        {/*title*/}
         <div className="place-self-center w-full">
           <p className="text-4xl font-bold">2023</p>
           <p className="text-8xl font-bold">Portfolio</p>
