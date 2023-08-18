@@ -1,4 +1,4 @@
-FROM node:lts as build-deps
+FROM node:lts as build
 WORKDIR /app
 ADD . /app
 

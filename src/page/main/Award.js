@@ -94,11 +94,11 @@ function PrizeList() {
 
 function PrizeCarouselItem(x) {
   let tagClass = "";
-  if (x.type == "금상") tagClass = "bg-yellow-400";
-  if (x.type == "은상") tagClass = "bg-zinc-400";
-  if (x.type == "동상") tagClass = "bg-amber-800";
-  if (x.type == "장려상") tagClass = "bg-slate-700";
-  if (x.type == "수료증/표창장") {
+  if (x.type === "금상") tagClass = "bg-yellow-400";
+  if (x.type === "은상") tagClass = "bg-zinc-400";
+  if (x.type === "동상") tagClass = "bg-amber-800";
+  if (x.type === "장려상") tagClass = "bg-slate-700";
+  if (x.type === "수료증/표창장") {
     tagClass = "bg-sky-400";
     return;
   }
@@ -120,11 +120,11 @@ function PrizeCarouselItem(x) {
 
 function PrizeListItem(x) {
   let tagClass = "";
-  if (x.type == "금상") tagClass = "bg-yellow-400";
-  if (x.type == "은상") tagClass = "bg-zinc-400";
-  if (x.type == "동상") tagClass = "bg-amber-800";
-  if (x.type == "장려상") tagClass = "bg-slate-950";
-  if (x.type == "수료증/표창장") {
+  if (x.type === "금상") tagClass = "bg-yellow-400";
+  if (x.type === "은상") tagClass = "bg-zinc-400";
+  if (x.type === "동상") tagClass = "bg-amber-800";
+  if (x.type === "장려상") tagClass = "bg-slate-950";
+  if (x.type === "수료증/표창장") {
     tagClass = "bg-sky-400";
     return;
   }

@@ -8,7 +8,6 @@ import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
 
 function App() {
   const location = useLocation();
-  const background = location.state && location.state.background;
 
   return (
     <Routes>
