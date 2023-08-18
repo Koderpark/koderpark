@@ -1,16 +1,5 @@
 import AwardsData from "../../data/Awards.json";
-import Flickity from "react-flickity-component";
 import "../../style/Prize.css";
-
-let elem = document.getElementById("carousel");
-let flkty = {
-  prevNextButtons: false,
-  pageDots: false,
-  draggable: true,
-  autoPlay: 2000,
-  wrapAround: true,
-  dragThreshold: 16,
-};
 
 /*import { Client } from "@notionhq/client";
 const notion = new Client({
