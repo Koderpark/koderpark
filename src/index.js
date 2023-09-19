@@ -7,21 +7,13 @@ import { SVG } from "./page/main/BusinessCard";
 
 import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
 
-function App() {
-  const location = useLocation();
-
-  return (
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <BrowserRouter>
     <Routes>
       <Route path="/" element={<Main />} />
       <Route path="/card" element={<SVG />} />
     </Routes>
-  );
-}
-
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(
-  <BrowserRouter>
-    <App />
   </BrowserRouter>
 );
 
