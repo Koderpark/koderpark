@@ -122,4 +122,14 @@ function BusinessCard() {
     </div>
   );
 }
-export default BusinessCard;
+
+function SVG() {
+  return (
+    <svg width="450" height="250" viewBox="0 0 450 250">
+      <foreignObject width="100%" height="100%">
+        <FlipCard />
+      </foreignObject>
+    </svg>
+  );
+}
+export { BusinessCard, SVG };

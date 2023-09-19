@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 
 import Main from "./page/main";
+import { SVG } from "./page/main/BusinessCard";
 
 import { Route, Routes, useLocation, BrowserRouter } from "react-router-dom";
 
@@ -12,6 +13,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
+      <Route path="/card" element={<SVG />} />
     </Routes>
   );
 }
