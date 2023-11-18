@@ -4,28 +4,30 @@ import { BOJ, CF, SOLVEDAC, X, GITHUB, KAKAOTALK } from "../../images/social";
 
 function Hero() {
   return (
-    <div className="bg-slate-100 text-slate-950 h-screen">
-      <div className="float-left w-fit h-full grid px-24">
-        {/*title*/}
-        <div className="place-self-center w-full">
-          <p className="text-4xl font-bold">2023</p>
-          <p className="text-8xl font-bold">Portfolio</p>
-          <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
+    <div className="bg-slate-50 text-slate-950">
+      <div className="h-screen container mx-auto">
+        <div className="float-left h-full grid">
+          {/*title*/}
+          <div className="place-self-center w-full">
+            <p className="text-4xl font-bold">2023</p>
+            <p className="text-8xl font-bold">Portfolio</p>
+            <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
 
-          <p className="text-xl">2004년생 새내기 대학생입니다</p>
-          <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
-        </div>
-      </div>
-      <div className="float-right w-fit h-full grid px-24">
-        <div className="place-self-center grid grid-cols-2 gap-8">
-          <div className="flex flex-col gap-8">
-            <EduCard />
-            <ActCard />
-            <SocialCard />
+            <p className="text-xl">2004년생 새내기 대학생입니다</p>
+            <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
           </div>
-          <div className="flex flex-col gap-8">
-            <CntCard />
-            <SkillCard />
+        </div>
+        <div className="float-right w-fit h-full grid">
+          <div className="place-self-center grid grid-cols-2 gap-8">
+            <div className="flex flex-col gap-8">
+              <EduCard />
+              <ActCard />
+              <SocialCard />
+            </div>
+            <div className="flex flex-col gap-8">
+              <CntCard />
+              <SkillCard />
+            </div>
           </div>
         </div>
       </div>

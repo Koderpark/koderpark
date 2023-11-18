@@ -101,23 +101,27 @@ function Back() {
 function BusinessCard() {
   return (
     <div className="bg-slate-800 text-slate-50 p-24 overflow-auto">
-      <div className="float-left w-fit h-full grid">
-        <div>
-          <p className="text-6xl font-bold inline-block">Business Card</p>
+      <div className="container mx-auto">
+        <div className="float-left w-fit h-full grid">
+          <div>
+            <p className="text-6xl font-bold inline-block">Business Card</p>
 
-          <p className="text-2xl font-bold inline-block ms-2">Flippable</p>
+            <p className="text-2xl font-bold inline-block ms-2">Flippable</p>
+          </div>
+          <p className="text-lg">사이버 - 명함입니다</p>
+          <p className="text-lg mb-4">
+            명함을 클릭하시면 뒷면도 확인해 보실 수 있습니다
+          </p>
+          <p className="text-lg">블로그를 포함한 다양한 페이지부터</p>
+          <p className="text-lg">직접 대면했을때까지</p>
+          <p className="text-lg">
+            다양한 상황에서 만나보실 수 있습니다(예정됨)
+          </p>
         </div>
-        <p className="text-lg">사이버 - 명함입니다</p>
-        <p className="text-lg mb-4">
-          명함을 클릭하시면 뒷면도 확인해 보실 수 있습니다
-        </p>
-        <p className="text-lg">블로그를 포함한 다양한 페이지부터</p>
-        <p className="text-lg">직접 대면했을때까지</p>
-        <p className="text-lg">다양한 상황에서 만나보실 수 있습니다(예정됨)</p>
-      </div>
 
-      <div className="float-right w-fit h-full grid">
-        <FlipCard />
+        <div className="float-right w-fit h-full grid">
+          <FlipCard />
+        </div>
       </div>
     </div>
   );
