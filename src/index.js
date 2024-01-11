@@ -12,7 +12,6 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="/card" element={<SVG />} />
     </Routes>
   </BrowserRouter>
 );
