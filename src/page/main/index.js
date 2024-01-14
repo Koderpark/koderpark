@@ -11,6 +11,24 @@ import List from "../section/list.js";
 import Fullscreen from "../section/fullscreen.js";
 
 import "../../style/vars.css";
+import axios from "axios";
+
+async function query(){
+  const result = await axios.post(
+    `notion/databases/${process.env.REACT_APP_NOTION_DB}/query`,
+    {
+      page_size: 100,
+    },
+    {
+      headers: {
+        "Authorization": `Bearer ${process.env.REACT_APP_NOTION_TOKEN}`,
+        "Notion-Version": "2022-06-28"
+      }
+    }
+  );
+  console.log(result);
+  return result;
+}
 
 function Test(){
   return (
@@ -25,6 +43,8 @@ function Test(){
 }
 
 function Main() {
+  query()
+  //test();
   return (
     <div>
       <Container><Test/></Container>
