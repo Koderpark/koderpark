@@ -15,7 +15,7 @@ import axios from "axios";
 
 async function query(){
   const result = await axios.post(
-    `notion/databases/${process.env.REACT_APP_NOTION_DB}/query`,
+    `${process.env.REACT_APP_NOTION_HOST}/v1/databases/${process.env.REACT_APP_NOTION_DB}/query`,
     {
       page_size: 100,
     },
