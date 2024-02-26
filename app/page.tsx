@@ -1,80 +1,62 @@
 import Image from "next/image";
-import Container from "../components/container";
-import Fullscreen from "../components/fullscreen";
-import List from "../components/list";
-import Header from "../components/header";
+
+import { Container, Fullscreen, List } from "../components/theme";
+import Title from "../components/title";
+import ListElem from "../components/list_elem";
 
 import HeroBG from "../public/asset/image/herobg.jpg";
-const { Client } = require("@notionhq/client");
 
-const notion = new Client({ auth: process.env.NOTION_SECRET });
+import Test from "../data/notion";
 
-async function Test() {
-  const response = await notion.databases.query({
-    database_id: process.env.NOTION_DB,
-  });
-
-  return response.results.map((item: any, idx: number) => {
-    const Title = item.properties["Title"].title[0].text.content;
-    const Year = item.properties["Year"].select.name;
-    const Type = item.properties["Type"].select.name;
-    const Tech = item.properties["Tech"].multi_select.map(
-      (x: any, idx: number) => {
-        return (
-          <span key={idx} className={`pill pill-sm bg-${x.color}-200`}>
-            {x.name}
-          </span>
-        );
-      }
-    );
-    const Content = item.properties["Content"].rich_text[0].text.content;
-    const Url = item.properties["Url"].url;
-
-    return (
-      <div key={idx} className="">
-        <div className="flex gap-1 mb-2">{Tech}</div>
-        <a href={Url} className="text-3xl font-bold">
-          {Title}
-        </a>
-        <span className="text-base font-semibold">{Year + " | " + Type}</span>
-        <p>{Content}</p>
-      </div>
-    );
-  });
+async function MakeList() {
+  const ListArr = await Test();
+  return ListArr.map((item: any) => ListElem(item));
 }
 
 export default async function Home() {
   return (
-    <div className="bg-light">
-      <Header />
-      <div className="page">
-        <Container>
-          <div className="grid relative p-16">
-            <div className="absolute top-0 left-0 size-full bg-black">
-              <Image
-                src={HeroBG}
-                alt=""
-                className="h-full object-cover opacity-60"
-              />
-            </div>
-            <div className="relative text-gray-100 lib-grid">
-              <p className="text-4xl font-bold">2024</p>
-              <p className="text-8xl font-bold">Portfolio</p>
-              <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
-              <p className="text-xl">2004년생 헌내기 대학생입니다</p>
-              <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
+    <div className="page">
+      <Container>
+        <div className="grid relative p-16">
+          <div className="absolute top-0 left-0 size-full bg-black">
+            <Image
+              src={HeroBG}
+              alt=""
+              className="h-full object-cover opacity-60"
+            />
+          </div>
+          <div className="relative text-gray-100 lib-grid">
+            <p className="text-4xl font-bold">2024</p>
+            <p className="text-8xl font-bold">Portfolio</p>
+            <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
+            <p className="text-xl">23학번 헌내기 대학생입니다</p>
+            <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
+          </div>
+        </div>
+      </Container>
+
+      <Fullscreen>
+        <div className="flex grid-col-2">
+          <div className="flex-1">
+            <Title header="자기소개" subheader="Introduce" />
+            <div className="mt-4">
+              <p className="text-xl">국민대학교 소프트웨어학부 23학번 재학생</p>
+              <p className="text-xl">KMUSW KPSC 회장 (2023~2024)</p>
+              <p className="text-xl">GDSC Kookmin Core Member (2024)</p>
             </div>
           </div>
-        </Container>
+          <div>helloworld</div>
+        </div>
+      </Fullscreen>
 
-        <Fullscreen>
-          <h1>test</h1>
-        </Fullscreen>
+      <List>
+        <Title header="프로젝트" subheader="Project" />
+        <div className="flex flex-col gap-8">{await MakeList()}</div>
+      </List>
 
-        <List>
-          <div className="flex flex-col gap-8">{Test()}</div>
-        </List>
-      </div>
+      <List>
+        <Title header="대외활동" subheader="Achievement" />
+      </List>
     </div>
   );
 }
