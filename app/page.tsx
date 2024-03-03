@@ -45,13 +45,13 @@ export default async function Home() {
               <p className="text-xl">GDSC Kookmin Core Member (2024)</p>
             </div>
           </div>
-          <div>helloworld</div>
+          {/* <div>여기는 명함 자리</div> */}
         </div>
       </Fullscreen>
 
       <List>
         <Title header="프로젝트" subheader="Project" />
-        <div className="flex flex-col gap-8">{await MakeList()}</div>
+        <div className="flex flex-col mt-16 gap-8">{await MakeList()}</div>
       </List>
 
       <List>

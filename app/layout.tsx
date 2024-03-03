@@ -18,6 +18,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="white">
+      <head>
+        <link
+          href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/static/woff2/SUIT.css"
+          rel="stylesheet"
+        />
+      </head>
+
       <body>
         <div className="bg-light">
           <Header />
