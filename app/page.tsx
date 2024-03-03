@@ -6,11 +6,30 @@ import ListElem from "../components/list_elem";
 
 import HeroBG from "../public/asset/image/herobg.jpg";
 
-import Test from "../data/notion";
+import { Project, Slide } from "../data/notion";
 
 async function MakeList() {
-  const ListArr = await Test();
+  const ListArr = await Project();
   return ListArr.map((item: any) => ListElem(item));
+}
+
+function elem(param: any) {
+  const { From, Date, Name, Link } = param;
+  console.log(From);
+  return (
+    <div>
+      <a href={Link} className="text-3xl font-bold">
+        {From}
+      </a>
+      <span className="text-base font-semibold">{Date}</span>
+      <p>{Name}</p>
+    </div>
+  );
+}
+
+async function MakeSlide() {
+  const test = await Slide();
+  return test.map((item: any) => elem(item));
 }
 
 export default async function Home() {
@@ -55,7 +74,9 @@ export default async function Home() {
       </List>
 
       <List>
-        <Title header="대외활동" subheader="Achievement" />
+        <Title header="슬라이드" subheader="Achievement" />
+
+        <div className="flex flex-col mt-16 gap-8">{await MakeSlide()}</div>
       </List>
     </div>
   );
