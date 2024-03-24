@@ -14,7 +14,7 @@ async function Project() {
     const Tech = item.properties["Tech"].multi_select.map(
       (x: any, idx: number) => {
         return (
-          <span key={idx} className={`pill pill-sm bg-${x.color}-200`}>
+          <span key={idx} className={`pill-sm bg-${x.color}-200`}>
             {x.name}
           </span>
         );
@@ -44,12 +44,14 @@ async function Slide() {
     const Date = item.properties["Date"].date.start;
     const Name = item.properties["Name"].rich_text[0].plain_text;
     const Link = item.properties["Link"].url;
+    const Img = item.properties["Thumbnail"].url;
 
     return {
       From,
       Date,
       Name,
       Link,
+      Img,
     };
   });
 }

@@ -1,4 +1,4 @@
-function Container(props: any) {
+function Hero(props: any) {
   return (
     <div className="bg-light lib-grid">
       <div className="lib-grid-l flex flex-column items-center">
@@ -18,8 +18,16 @@ function Fullscreen(props: any) {
   );
 }
 
-function List(props: any) {
-  return <div className="bg-light lib-grid gap-8">{props.children}</div>;
+function Container(props: any) {
+  return (
+    <div className="bg-heavy lib-grid py-8">
+      <div className="lib-grid-l">{props.children}</div>
+    </div>
+  );
 }
 
-export { Container, Fullscreen, List };
+function List(props: any) {
+  return <div className="bg-light lib-grid">{props.children}</div>;
+}
+
+export { Hero, Container, Fullscreen, List };

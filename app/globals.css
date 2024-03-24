@@ -1,9 +1,15 @@
 @import "./test.css";
+@import "./slide.css";
 
 /* 자기소개 페이지와 공유하는 css 모음집 */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-rev {
+  @apply bg-gray-900 dark:bg-gray-50 shadow;
+  @apply text-gray-100 dark:text-gray-950;
+}
 
 :root {
   /* Colours */

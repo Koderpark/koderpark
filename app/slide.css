@@ -1,0 +1,22 @@
+.slide-img {
+  border: 1px solid black;
+}
+
+.slide-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 1080px) {
+  .slide-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .slide-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
