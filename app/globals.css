@@ -131,6 +131,7 @@
 }
 
 .pill-clear {
+  @apply shadow-none;
   background-color: transparent;
 }
 

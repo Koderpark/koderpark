@@ -76,6 +76,31 @@ export default async function Home() {
       </Container>
 
       <List>
+        <Title header="기술 스택" subheader="Tech Stack" />
+        <p className="text-xl">저는 이런 것들에 관심을 가지고 있습니다</p>
+        <div className="p-4 my-4 rounded-xl bg-heavy">
+          <i className="devicon-react-original colored" />
+          <i className="devicon-nextjs-plain colored" />
+          <i className="devicon-typescript-plain colored" />
+          <i className="devicon-javascript-plain colored" />
+          <i className="devicon-tailwindcss-plain colored" />
+          <i className="devicon-nodejs-plain-wordmark colored" />
+          <i className="devicon-cplusplus-plain colored" />
+          <i className="devicon-docker-plain colored" />
+
+          <i className="devicon-jenkins-line" />
+
+          <i className="devicon-mysql-original colored" />
+          <i className="devicon-notion-plain" />
+        </div>
+        <p className="text-xl">더 이상 사용하지 않는 기술스택들</p>
+        <div className="p-4 my-4 rounded-xl bg-heavy">
+          <i className="devicon-php-plain colored" />
+          <i className="devicon-bootstrap-plain colored" />
+        </div>
+      </List>
+
+      <List>
         <Title header="프로젝트" subheader="Project" />
         <p className="text-xl">생활 속의 불편함을 소프트웨어로 해결합니다</p>
         <div className="flex flex-col mt-16 gap-8">{await MakeList()}</div>
