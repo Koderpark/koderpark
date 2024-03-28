@@ -1,5 +1,6 @@
 @import "./test.css";
 @import "./slide.css";
+@import "./timeline.css";
 
 /* 자기소개 페이지와 공유하는 css 모음집 */
 @tailwind base;

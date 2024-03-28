@@ -1,0 +1,18 @@
+.tl-guide div {
+  /* height: 4rem; */
+  border-right: 2px solid black;
+  color: black;
+}
+
+.tlItem {
+  background: #aaaaaa;
+  display: block;
+  float: left;
+}
+
+.tlText {
+  height: 100%;
+  text-align: center;
+  writing-mode: vertical-rl;
+  color: white;
+}

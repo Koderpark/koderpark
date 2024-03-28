@@ -6,7 +6,7 @@ import ListElem from "../components/list_elem";
 
 import HeroBG from "../public/asset/image/herobg.jpg";
 
-import { Project, Slide } from "../data/notion";
+import { Project, Slide, Timeline } from "../data/notion";
 
 async function MakeList() {
   const ListArr = await Project();
@@ -38,7 +38,59 @@ async function MakeSlide() {
   });
 }
 
+async function GetTimeline() {
+  const query = await Timeline();
+
+  const mnYear = Math.min(
+    ...query.map((item: any, idx: number) => {
+      return item.Start;
+    })
+  );
+  const mxYear = Math.max(
+    ...query.map((item: any, idx: number) => {
+      return item.End;
+    })
+  );
+
+  return { data: query, mnYear, mxYear };
+}
+
+async function MakeTimeline(data: any, mnYear: number) {
+  const timeline = data.map((item: any, index: number) => {
+    const { Id, Name, Start, End, Color } = item;
+    return (
+      <div
+        key={index}
+        className={"tlItem"}
+        style={{
+          height: `${(End - Start + 1) * 10}rem`,
+          marginTop: `${(Start - mnYear) * 10}rem`,
+          backgroundColor: `#${Color}`,
+        }}
+      >
+        <p className="tlText">{Name}</p>
+      </div>
+    );
+  });
+  return timeline;
+}
+
+async function MakeTimelineGuide(tlData: any) {
+  const preHeight = {
+    1: "h-[1rem]",
+    2: "h-[2rem]",
+  };
+
+  let arr = [];
+  for (let i = tlData.mnYear; i <= tlData.mxYear; i++) {
+    arr.push(<div className="min-h-[10rem] h-fit">{i}</div>);
+  }
+  return arr;
+}
+
 export default async function Home() {
+  const tlData = await GetTimeline();
+
   return (
     <div className="page">
       <Hero>
@@ -111,6 +163,12 @@ export default async function Home() {
         <p className="text-xl">
           코더빡은 어떤 삶을 살아왔는가에 대한 기록입니다
         </p>
+        <div className="flex flex-row mt-16 gap-8">
+          <div className="tl-guide">{await MakeTimelineGuide(tlData)}</div>
+          <div className="">
+            {await MakeTimeline(tlData.data, tlData.mnYear)}
+          </div>
+        </div>
       </List>
 
       <Container>
