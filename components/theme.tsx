@@ -27,7 +27,7 @@ function Container(props: any) {
 }
 
 function List(props: any) {
-  return <div className="bg-light lib-grid">{props.children}</div>;
+  return <div className="lib-grid">{props.children}</div>;
 }
 
 export { Hero, Container, Fullscreen, List };

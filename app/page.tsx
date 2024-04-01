@@ -5,6 +5,7 @@ import Title from "../components/title";
 import ListElem from "../components/list_elem";
 
 import HeroBG from "../public/asset/image/herobg.jpg";
+import Gantt from "../components/gantt";
 
 import { Project, Slide, Timeline } from "../data/notion";
 
@@ -55,35 +56,10 @@ async function GetTimeline() {
   return { data: query, mnYear, mxYear };
 }
 
-async function MakeTimeline(data: any, mnYear: number) {
-  const timeline = data.map((item: any, index: number) => {
-    const { Id, Name, Start, End, Color } = item;
-    return (
-      <div
-        key={index}
-        className={"tlItem"}
-        style={{
-          height: `${(End - Start + 1) * 10}rem`,
-          marginTop: `${(Start - mnYear) * 10}rem`,
-          backgroundColor: `#${Color}`,
-        }}
-      >
-        <p className="tlText">{Name}</p>
-      </div>
-    );
-  });
-  return timeline;
-}
-
 async function MakeTimelineGuide(tlData: any) {
-  const preHeight = {
-    1: "h-[1rem]",
-    2: "h-[2rem]",
-  };
-
   let arr = [];
   for (let i = tlData.mnYear; i <= tlData.mxYear; i++) {
-    arr.push(<div className="min-h-[10rem] h-fit">{i}</div>);
+    arr.push(<div className="w-64">{i}</div>);
   }
   return arr;
 }
@@ -117,8 +93,12 @@ export default async function Home() {
           <div className="flex-1">
             <Title header="자기소개" subheader="Introduce" />
             <div className="mt-4">
-              <p className="text-xl">국민대학교 소프트웨어학부 23학번 재학생</p>
-              <p className="text-xl">KMUSW KPSC 회장 (2023~2024)</p>
+              <p className="text-xl">
+                국민대학교 소프트웨어학부 23학번 재학생입니다.
+              </p>
+              <p className="text-xl">
+                백엔드 소프트웨어 엔지니어를 희망하고 있습니다.
+              </p>
               <p className="text-xl">GDSC Kookmin Core Member (2024)</p>
               <p className="text-xl">Software Maestro 15기 (2024)</p>
             </div>
@@ -152,23 +132,20 @@ export default async function Home() {
         </div>
       </List>
 
+      <Fullscreen>
+        <List>
+          <Title header="대외활동" subheader="Timeline" />
+          <p className="text-xl">
+            코더빡은 어떤 삶을 살아왔는가에 대한 기록입니다
+          </p>
+        </List>
+        <Gantt></Gantt>
+      </Fullscreen>
+
       <List>
         <Title header="프로젝트" subheader="Project" />
         <p className="text-xl">생활 속의 불편함을 소프트웨어로 해결합니다</p>
         <div className="flex flex-col mt-16 gap-8">{await MakeList()}</div>
-      </List>
-
-      <List>
-        <Title header="대외활동" subheader="Timeline" />
-        <p className="text-xl">
-          코더빡은 어떤 삶을 살아왔는가에 대한 기록입니다
-        </p>
-        <div className="flex flex-row mt-16 gap-8">
-          <div className="tl-guide">{await MakeTimelineGuide(tlData)}</div>
-          <div className="">
-            {await MakeTimeline(tlData.data, tlData.mnYear)}
-          </div>
-        </div>
       </List>
 
       <Container>

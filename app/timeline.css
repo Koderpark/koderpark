@@ -1,7 +1,8 @@
-.tl-guide div {
-  /* height: 4rem; */
-  border-right: 2px solid black;
+.tl-guide {
+  text-align: center;
   color: black;
+  border-bottom: 1px solid black;
+  @apply mb-1;
 }
 
 .tlItem {
@@ -11,8 +12,6 @@
 }
 
 .tlText {
-  height: 100%;
   text-align: center;
-  writing-mode: vertical-rl;
   color: white;
 }

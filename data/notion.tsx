@@ -14,7 +14,7 @@ async function Project() {
     const Tech = item.properties["Tech"].multi_select.map(
       (x: any, idx: number) => {
         return (
-          <span key={idx} className={`pill-sm bg-${x.color}-200`}>
+          <span key={idx} className={`pill-sm bg-rev`}>
             {x.name}
           </span>
         );
@@ -59,7 +59,7 @@ async function Slide() {
 async function Timeline() {
   const response = await notion.databases.query({
     database_id: process.env.NOTION_DB_TIMELINE,
-    sort: [
+    sorts: [
       {
         property: "Order",
         direction: "ascending",
@@ -67,17 +67,19 @@ async function Timeline() {
     ],
   });
 
-  return response.results.map((item: any, idx: number) => {
+  let res: any[] = [];
+
+  response.results.forEach((item: any, idx: number) => {
     const Name = item.properties["Name"].title[0].plain_text;
     const Start = item.properties["Start"].number;
     const End = item.properties["End"].number;
     const Color = item.properties["Color"].rich_text[0].plain_text;
     const Order = item.properties["Order"].number;
 
-    console.log(Order);
-
-    return { Order, Name, Start, End, Color };
+    res.push({ Order, Name, Start, End, Color });
   });
+
+  return res;
 }
 
 export { Project, Slide, Timeline };
