@@ -6,6 +6,7 @@ import ListElem from "../components/list_elem";
 
 import HeroBG from "../public/asset/image/herobg.jpg";
 import Gantt from "../components/gantt";
+import Contact from "../components/contact";
 
 import { Project, Slide, Timeline } from "../data/notion";
 
@@ -68,7 +69,7 @@ export default async function Home() {
   const tlData = await GetTimeline();
 
   return (
-    <div className="page">
+    <div className="page pb-32">
       <Hero>
         <div className="grid relative p-16">
           <div className="absolute top-0 left-0 size-full bg-black">
@@ -88,7 +89,7 @@ export default async function Home() {
         </div>
       </Hero>
 
-      <Container>
+      {/* <Container>
         <div className="flex grid-col-2">
           <div className="flex-1">
             <Title header="자기소개" subheader="Introduce" />
@@ -103,9 +104,9 @@ export default async function Home() {
               <p className="text-xl">Software Maestro 15기 (2024)</p>
             </div>
           </div>
-          {/* <div>여기는 명함 자리</div> */}
+          <div>여기는 명함 자리</div>
         </div>
-      </Container>
+      </Container> */}
 
       <List>
         <Title header="기술 스택" subheader="Tech Stack" />
@@ -124,11 +125,6 @@ export default async function Home() {
 
           <i className="devicon-mysql-original colored" />
           <i className="devicon-notion-plain" />
-        </div>
-        <p className="text-xl">더 이상 사용하지 않는 기술스택들</p>
-        <div className="p-4 my-4 rounded-xl bg-heavy">
-          <i className="devicon-php-plain colored" />
-          <i className="devicon-bootstrap-plain colored" />
         </div>
       </List>
 
@@ -153,6 +149,8 @@ export default async function Home() {
         <p className="text-xl">발표를 통해 공유한 지식들을 정리해두었습니다</p>
         <div className="mt-8 gap-8 slide-container">{await MakeSlide()}</div>
       </Container>
+
+      <Contact></Contact>
     </div>
   );
 }
