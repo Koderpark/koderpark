@@ -10,16 +10,7 @@ GDSC Kookmin Organizer ( Core Member )
 # Awards
 2023 / ICPC Seoul Regional 53th - Team "KookBab"  
 
-# Contact/Handles
-- discord @koderpark  
-- X(formerly Twitter) @koderpark
-- solved.ac @koder0205
-
-- https://blog.koder.page  
-- koder0205@gmail.com
-- +82 10-7399-6630
-
-### Previous Achievements
+# Previous Achievements
 2020 / 국제정보올림피아드 처음반 수료  
 2018 / 세종과학예술영재학교 부설영재교육원 수료  
 2017 / 국립공주대학교 부설영재교육원 수료  
