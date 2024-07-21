@@ -1,6 +1,7 @@
 import Image from "next/image";
 
-import { Hero, Container, Fullscreen, List } from "../components/theme";
+import { Container } from "../../ReactComponent/";
+import { Hero, List } from "../components/theme";
 import Title from "../components/title";
 import ListElem from "../components/list_elem";
 
@@ -108,7 +109,7 @@ export default async function Home() {
         </div>
       </Container> */}
 
-      <List>
+      <Container size="m">
         <Title header="기술 스택" subheader="Tech Stack" />
         <p className="text-xl">저는 이런 것들에 관심을 가지고 있습니다</p>
         <div className="p-4 my-4 rounded-xl bg-heavy">
@@ -126,23 +127,21 @@ export default async function Home() {
           <i className="devicon-mysql-original colored" />
           <i className="devicon-notion-plain" />
         </div>
-      </List>
+      </Container>
 
-      <Fullscreen>
-        <List>
-          <Title header="대외활동" subheader="Timeline" />
-          <p className="text-xl">
-            코더빡은 어떤 삶을 살아왔는가에 대한 기록입니다
-          </p>
-        </List>
+      <Container type="heavy" size="xl">
+        <Title header="대외활동" subheader="Timeline" />
+        <p className="text-xl">
+          코더빡은 어떤 삶을 살아왔는가에 대한 기록입니다
+        </p>
         <Gantt></Gantt>
-      </Fullscreen>
+      </Container>
 
-      <List>
+      <Container size="m">
         <Title header="프로젝트" subheader="Project" />
         <p className="text-xl">생활 속의 불편함을 소프트웨어로 해결합니다</p>
         <div className="flex flex-col mt-16 gap-8">{await MakeList()}</div>
-      </List>
+      </Container>
 
       <Container>
         <Title header="발표자료" subheader="Slide" />
