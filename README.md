@@ -8,7 +8,7 @@ GDSC Kookmin Organizer ( Core Member )
 소프트웨어 마에스트로 15기  
 
 # Awards
-2023 / ICPC Seoul Regional 53th - Team "KookBab"  
+2023 / ICPC Seoul Regional 53rd - Team "KookBab"  
 
 # Previous Achievements
 2020 / 국제정보올림피아드 처음반 수료  
