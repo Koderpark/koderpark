@@ -2,9 +2,9 @@
 코더빡으로 불러주시면 됩니다.
 
 # Profile
-국민대학교 소프트웨어학부 재학  
+국민대학교 소프트웨어학부 ( 2학년, 휴학 )  
 국민대학교 소프트웨어융합대학 과동아리 KPSC 회장  
-GDSC Kookmin Organizer ( Core Member )  
+GDGoC Kookmin Organizer ( Core Member )  
 소프트웨어 마에스트로 15기  
 
 # Awards
