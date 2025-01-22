@@ -6,10 +6,11 @@ const nextConfig = {
         protocol: "https",
         hostname: "koderpark.github.io",
         port: "",
-        pathname: "/slide/**",
+        pathname: "/**/**",
       },
     ],
   },
+  reactStrictMode: true,
 };
 
 module.exports = nextConfig;

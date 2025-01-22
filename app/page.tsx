@@ -1,6 +1,5 @@
 import Image from "next/image";
-
-import { Container } from "../../ReactComponent/";
+import { Container } from "../components/container";
 import { Hero, List } from "../components/theme";
 import Title from "../components/title";
 import ListElem from "../components/list_elem";
@@ -19,12 +18,14 @@ async function MakeList() {
 async function MakeSlide() {
   const test = await Slide();
   return test.map((item: any, index: number) => {
-    const { From, Date, Name, Link, Img } = item;
+    const { From, Date, Name, ID, Img } = item;
+    const Link = `https://koderpark.github.io/StaticAssets/Slide/${ID}.pdf`;
+    const Thumbnail = `https://koderpark.github.io/StaticAssets/SlideThumbnail/${ID}.png`;
     return (
       <div key={index}>
         <a href={Link} target="_blank" rel="noreferrer noopener">
           <Image
-            src={Img}
+            src={Thumbnail}
             alt={Name}
             width={1280}
             height={720}
@@ -66,8 +67,8 @@ async function MakeTimelineGuide(tlData: any) {
   return arr;
 }
 
-export default async function Home() {
-  const tlData = await GetTimeline();
+export default function Home() {
+  const tlData = GetTimeline();
 
   return (
     <div className="page pb-32">
@@ -82,7 +83,7 @@ export default async function Home() {
           </div>
           <div className="relative text-gray-100 lib-grid">
             <p className="text-4xl font-bold">2024</p>
-            <p className="text-8xl font-bold">Portfolio</p>
+            <p className="text-8xl font-bold">Portfolio</p>ㅌ
             <p className="text-4xl font-bold mb-4">Koder / 박성훈</p>
             <p className="text-xl">23학번 헌내기 대학생입니다</p>
             <p className="text-xl">코더빡이라고 불러주시면 됩니다</p>
@@ -90,7 +91,7 @@ export default async function Home() {
         </div>
       </Hero>
 
-      {/* <Container>
+      <Container>
         <div className="flex grid-col-2">
           <div className="flex-1">
             <Title header="자기소개" subheader="Introduce" />
@@ -107,7 +108,7 @@ export default async function Home() {
           </div>
           <div>여기는 명함 자리</div>
         </div>
-      </Container> */}
+      </Container>
 
       <Container size="m">
         <Title header="기술 스택" subheader="Tech Stack" />
@@ -140,13 +141,17 @@ export default async function Home() {
       <Container size="m">
         <Title header="프로젝트" subheader="Project" />
         <p className="text-xl">생활 속의 불편함을 소프트웨어로 해결합니다</p>
-        <div className="flex flex-col mt-16 gap-8">{await MakeList()}</div>
+        <div className="flex flex-col mt-16 gap-8">{MakeList()}</div>
       </Container>
 
-      <Container>
-        <Title header="발표자료" subheader="Slide" />
-        <p className="text-xl">발표를 통해 공유한 지식들을 정리해두었습니다</p>
-        <div className="mt-8 gap-8 slide-container">{await MakeSlide()}</div>
+      <Container size="xl">
+        <Container size="m">
+          <Title header="발표자료" subheader="Slide" />
+          <p className="text-xl">
+            발표를 통해 공유한 지식들을 정리해두었습니다
+          </p>
+        </Container>
+        <div className="mt-8 gap-8 slide-container">{MakeSlide()}</div>
       </Container>
 
       <Contact></Contact>

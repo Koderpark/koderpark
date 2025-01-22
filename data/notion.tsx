@@ -45,6 +45,7 @@ async function Slide() {
     const Name = item.properties["Name"].rich_text[0].plain_text;
     const Link = item.properties["Link"].url;
     const Img = item.properties["Thumbnail"].url;
+    const ID = item.properties["ID"].rich_text[0].plain_text;
 
     return {
       From,
@@ -52,6 +53,7 @@ async function Slide() {
       Name,
       Link,
       Img,
+      ID,
     };
   });
 }

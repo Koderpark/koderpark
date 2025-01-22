@@ -32,7 +32,7 @@ export default function RootLayout({
 
       <body>
         <div className="bg-light">
-          <Header />
+          {/* <Header /> */}
           {children}
         </div>
       </body>
