@@ -2,19 +2,16 @@
 
 {
   "Name/Nickname" : ["박성훈", "Koderpark"],
-
   "Body" : [
-    "국민대학교 소프트웨어학부 23학번, 현재 휴학후 보충역 산업기능요원 병역특례 준비중입니다."
+    "국민대학교 소프트웨어학부 23학번, 현재 휴학후 보충역 산업기능요원 병역특례 준비중입니다.",
     "코더빡으로 불러주시면 됩니다."
-  ]
-
+  ],
   "Interests" : [
     "Problem Solving / Competitive Programming",
     "Backend Engineering",
     "Homelabbing - Server Infrastructure",
-    "Making Something (Tinkering, Soldering, Etc...)",
+    "Making Something (Tinkering, Soldering, Etc...)"
   ],
-
   "Education" : {
     "Univ" : "Kookmin University",
     "Major" : "Software Engineering",
